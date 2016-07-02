@@ -16,6 +16,9 @@
 		88D2957D1D27EB91009F2470 /* VoiceBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2957C1D27EB91009F2470 /* VoiceBotUITests.swift */; };
 		88D2958D1D27F328009F2470 /* AddKeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2958C1D27F328009F2470 /* AddKeywordViewController.swift */; };
 		88D2958F1D27FC7A009F2470 /* KeywordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2958E1D27FC7A009F2470 /* KeywordTableViewController.swift */; };
+		88D295921D281672009F2470 /* btn_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D295911D281672009F2470 /* btn_plus.png */; };
+		88D295941D281678009F2470 /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D295931D281678009F2470 /* btn_back.png */; };
+		88D295961D2818D3009F2470 /* KeywordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D295951D2818D3009F2470 /* KeywordDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		88D2957E1D27EB91009F2470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D2958C1D27F328009F2470 /* AddKeywordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKeywordViewController.swift; sourceTree = "<group>"; };
 		88D2958E1D27FC7A009F2470 /* KeywordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordTableViewController.swift; sourceTree = "<group>"; };
+		88D295911D281672009F2470 /* btn_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_plus.png; sourceTree = "<group>"; };
+		88D295931D281678009F2470 /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
+		88D295951D2818D3009F2470 /* KeywordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,11 @@
 		88D2955B1D27EB8F009F2470 /* VoiceBot */ = {
 			isa = PBXGroup;
 			children = (
+				88D295901D281663009F2470 /* images */,
 				88D2955C1D27EB8F009F2470 /* AppDelegate.swift */,
 				88D2955E1D27EB8F009F2470 /* TopViewController.swift */,
 				88D2958E1D27FC7A009F2470 /* KeywordTableViewController.swift */,
+				88D295951D2818D3009F2470 /* KeywordDetailViewController.swift */,
 				88D2958C1D27F328009F2470 /* AddKeywordViewController.swift */,
 				88D295601D27EB8F009F2470 /* Main.storyboard */,
 				88D295631D27EB8F009F2470 /* Assets.xcassets */,
@@ -129,6 +137,15 @@
 				88D2957E1D27EB91009F2470 /* Info.plist */,
 			);
 			path = VoiceBotUITests;
+			sourceTree = "<group>";
+		};
+		88D295901D281663009F2470 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				88D295931D281678009F2470 /* btn_back.png */,
+				88D295911D281672009F2470 /* btn_plus.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +254,9 @@
 			files = (
 				88D295671D27EB8F009F2470 /* LaunchScreen.storyboard in Resources */,
 				88D295641D27EB8F009F2470 /* Assets.xcassets in Resources */,
+				88D295921D281672009F2470 /* btn_plus.png in Resources */,
 				88D295621D27EB8F009F2470 /* Main.storyboard in Resources */,
+				88D295941D281678009F2470 /* btn_back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D295961D2818D3009F2470 /* KeywordDetailViewController.swift in Sources */,
 				88D2955F1D27EB8F009F2470 /* TopViewController.swift in Sources */,
 				88D2955D1D27EB8F009F2470 /* AppDelegate.swift in Sources */,
 				88D2958F1D27FC7A009F2470 /* KeywordTableViewController.swift in Sources */,

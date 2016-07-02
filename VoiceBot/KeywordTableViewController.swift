@@ -65,6 +65,11 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("detail", sender:nil)
+    }
+    
     @IBAction func backButtonAction(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
