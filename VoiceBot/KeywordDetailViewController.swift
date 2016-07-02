@@ -10,9 +10,10 @@ import UIKit
 
 class KeywordDetailViewController: UIViewController {
 
+    @IBOutlet weak var myNavigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myNavigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
     }
 

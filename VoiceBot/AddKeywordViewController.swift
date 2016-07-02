@@ -11,11 +11,14 @@ import UIKit
 class AddKeywordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
     @IBOutlet weak var selectpicker: UIPickerView!
+    @IBOutlet weak var myNavigationBar: UINavigationBar!
+    
     var categoryArr: NSArray = ["電気をつける","電気の色をピンクに変える","電気の色を青に変える","電気の色を白に変える","電気の色を黄色に変える",]
     override func viewDidLoad() {
         super.viewDidLoad()
         selectpicker.dataSource = self
         selectpicker.delegate = self
+        myNavigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
     }
 

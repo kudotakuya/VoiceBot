@@ -87,7 +87,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93Z-0H-X4j">
                                                     <rect key="frame" x="40" y="27" width="519" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -123,6 +123,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="keywordTable" destination="F71-Xj-ReO" id="aQf-uo-XRV"/>
+                        <outlet property="myNavigationBar" destination="Zul-GS-V2A" id="YPd-4H-Q0F"/>
                         <segue destination="hoF-SQ-CIU" kind="show" identifier="detail" id="kBP-T4-Lc3"/>
                     </connections>
                 </viewController>
@@ -183,7 +184,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="操作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VE-xr-Tlj">
                                 <rect key="frame" x="51" y="224" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -215,6 +216,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myNavigationBar" destination="Bok-8L-9YU" id="cBK-q9-Egw"/>
                         <outlet property="selectpicker" destination="Syu-kz-fzx" id="cG5-CU-HCX"/>
                     </connections>
                 </viewController>
@@ -259,6 +261,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="3Ih-AD-eQe" secondAttribute="trailing" constant="-20" id="n6Y-89-CRm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="3Ih-AD-eQe" id="iqu-RW-a1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXt-uP-dK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
