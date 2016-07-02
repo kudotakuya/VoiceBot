@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18089988909999999" green="0.19587062420000001" blue="0.27365451390000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tgG-8m-Myi" secondAttribute="bottom" constant="154" id="cBt-Gz-MbP"/>
                             <constraint firstItem="tgG-8m-Myi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uZG-bs-dvA"/>
@@ -50,10 +50,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-GS-V2A">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-GS-V2A">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.18089988909999999" green="0.19587062420000001" blue="0.27365451390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="e5z-nZ-KKK">
+                                    <navigationItem title=" キーワードリスト" id="e5z-nZ-KKK" userLabel="キーワードリスト">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="GNl-54-ZIz">
                                             <connections>
                                                 <action selector="backButtonAction:" destination="qz0-1A-FNo" id="WYq-bm-1Zr"/>
@@ -69,7 +74,9 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F71-Xj-ReO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.18089988907203394" green="0.19587062424620927" blue="0.27365451385757567" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.43227193809999997" green="0.43227193809999997" blue="0.43227193809999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.27365451390000001" green="0.27365451390000001" blue="0.27365451390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" id="CC8-Ga-lYg">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -77,10 +84,30 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CC8-Ga-lYg" id="acp-i7-LcZ">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93Z-0H-X4j">
+                                                    <rect key="frame" x="31" y="14" width="519" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="93Z-0H-X4j" secondAttribute="trailing" constant="9" id="HiK-c5-ecx"/>
+                                                <constraint firstItem="93Z-0H-X4j" firstAttribute="leading" secondItem="acp-i7-LcZ" secondAttribute="leadingMargin" constant="23" id="xLI-qH-dW7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.43227193809999997" green="0.43227193809999997" blue="0.43227193809999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-0c-8iS">
+                                <rect key="frame" x="0.0" y="-1" width="600" height="21"/>
+                                <color key="backgroundColor" red="0.18089988909999999" green="0.19587062420000001" blue="0.27365451390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18089988909999999" green="0.19587062420000001" blue="0.27365451390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
