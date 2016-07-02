@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddKeywordViewController: UIViewController {
+class AddKeywordViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class AddKeywordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButtonAction(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

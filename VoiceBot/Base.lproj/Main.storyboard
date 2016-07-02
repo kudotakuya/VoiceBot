@@ -54,6 +54,11 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="e5z-nZ-KKK">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="GNl-54-ZIz">
+                                            <connections>
+                                                <action selector="backButtonAction:" destination="qz0-1A-FNo" id="WYq-bm-1Zr"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="+" id="qig-i0-Ihi">
                                             <connections>
                                                 <segue destination="voR-zH-dKp" kind="show" id="67g-t8-9MN"/>
@@ -62,15 +67,36 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F71-Xj-ReO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" id="CC8-Ga-lYg">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CC8-Ga-lYg" id="acp-i7-LcZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Zul-GS-V2A" secondAttribute="trailing" constant="-20" id="PFX-6K-SKy"/>
+                            <constraint firstItem="slr-ky-mmO" firstAttribute="top" secondItem="F71-Xj-ReO" secondAttribute="bottom" id="YaO-VH-mwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F71-Xj-ReO" secondAttribute="trailing" constant="-20" id="i25-DS-mj0"/>
                             <constraint firstItem="Zul-GS-V2A" firstAttribute="leading" secondItem="8jA-r8-G6J" secondAttribute="leadingMargin" constant="-20" id="j0N-mz-bRf"/>
+                            <constraint firstItem="F71-Xj-ReO" firstAttribute="top" secondItem="Zul-GS-V2A" secondAttribute="bottom" id="odj-I2-M1a"/>
+                            <constraint firstItem="F71-Xj-ReO" firstAttribute="leading" secondItem="8jA-r8-G6J" secondAttribute="leadingMargin" constant="-20" id="xVM-eX-G6W"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="keywordTable" destination="F71-Xj-ReO" id="aQf-uo-XRV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxP-wD-0Wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +113,26 @@
                     <view key="view" contentMode="scaleToFill" id="i4C-oE-lzE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bok-8L-9YU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ruw-y6-NpI">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="tvm-a3-gso">
+                                            <connections>
+                                                <action selector="backButtonAction:" destination="voR-zH-dKp" id="IMm-6b-M5A"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bok-8L-9YU" secondAttribute="trailing" constant="-20" id="CN2-dj-gsU"/>
+                            <constraint firstItem="Bok-8L-9YU" firstAttribute="leading" secondItem="i4C-oE-lzE" secondAttribute="leadingMargin" constant="-20" id="WHa-wm-0Er"/>
+                            <constraint firstItem="Bok-8L-9YU" firstAttribute="top" secondItem="kez-H0-twj" secondAttribute="bottom" id="pPN-yZ-ehw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUo-EB-dE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
