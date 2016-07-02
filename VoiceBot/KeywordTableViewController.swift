@@ -30,6 +30,8 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
         
         let keywordlabel = keywordTable.viewWithTag(1) as! UILabel
         keywordlabel.text = "愛してるよ"
+        let actionlabel = keywordTable.viewWithTag(2) as! UILabel
+        actionlabel.text = "電気を消す"
         
         return cell
         
