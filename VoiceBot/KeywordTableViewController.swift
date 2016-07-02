@@ -11,12 +11,15 @@ import UIKit
 class KeywordTableViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var keywordTable: UITableView!
+    @IBOutlet weak var myNavigationBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         keywordTable.delegate = self
         keywordTable.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        myNavigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     
     //セル内容の変更
