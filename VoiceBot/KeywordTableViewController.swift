@@ -12,6 +12,7 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
 
     @IBOutlet weak var keywordTable: UITableView!
     @IBOutlet weak var myNavigationBar: UINavigationBar!
+    var array:NSArray = []
     override func viewDidLoad() {
         super.viewDidLoad()
         keywordTable.delegate = self
@@ -20,7 +21,34 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
         // Do any additional setup after loading the view.
         
         myNavigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        let URL = NSURL(string: "https://spajam-funkey.herokuapp.com/all")
+        let req = NSURLRequest(URL: URL!)
+        
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: configuration, delegate:nil, delegateQueue:NSOperationQueue.mainQueue())
+        
+        let task = session.dataTaskWithRequest(req, completionHandler: {
+            (data, response, error) -> Void in
+            do {
+                //print(data)
+                 self.array = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSArray
+                print(self.array)
+                print(self.array.count)
+                self.keywordTable.reloadData()
+            } catch {
+                //エラー処理
+            }
+            
+        })
+        task.resume()
+        
+
+
     }
+    
+    
+    
     
     //セル内容の変更
     
@@ -28,10 +56,12 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
 
         let cell = keywordTable.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
         
+        let phraseDictionary = self.array[indexPath.row]
+        
         let keywordlabel = keywordTable.viewWithTag(1) as! UILabel
-        keywordlabel.text = "愛してるよ"
+        keywordlabel.text = phraseDictionary["phrase"]?! as! String
         let actionlabel = keywordTable.viewWithTag(2) as! UILabel
-        actionlabel.text = "電気を消す"
+        actionlabel.text = phraseDictionary["action"]?! as! String
         
         return cell
         
@@ -44,7 +74,7 @@ class KeywordTableViewController: UIViewController, UITableViewDataSource,UITabl
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return self.array.count
         
     }
     
