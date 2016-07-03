@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddKeywordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class AddKeywordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var myTextField: UITextField!
     @IBOutlet weak var selectpicker: UIPickerView!
@@ -22,6 +22,7 @@ class AddKeywordViewController: UIViewController, UIPickerViewDataSource, UIPick
         super.viewDidLoad()
         selectpicker.dataSource = self
         selectpicker.delegate = self
+        myTextField.delegate = self;
         myNavigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         // Do any additional setup after loading the view.
     }
@@ -115,6 +116,12 @@ class AddKeywordViewController: UIViewController, UIPickerViewDataSource, UIPick
 
         
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
