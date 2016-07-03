@@ -223,6 +223,9 @@
                                     <constraint firstAttribute="height" constant="46" id="Hbx-Vy-XKR"/>
                                 </constraints>
                                 <state key="normal" image="botan_resp.png"/>
+                                <connections>
+                                    <action selector="addButton:" destination="voR-zH-dKp" eventType="touchUpInside" id="q3q-MB-Wvz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -252,6 +255,7 @@
                     </view>
                     <connections>
                         <outlet property="myNavigationBar" destination="Bok-8L-9YU" id="cBK-q9-Egw"/>
+                        <outlet property="myTextField" destination="8cg-E1-oIs" id="WVy-vr-fJ5"/>
                         <outlet property="selectpicker" destination="Syu-kz-fzx" id="cG5-CU-HCX"/>
                     </connections>
                 </viewController>
